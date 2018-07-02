@@ -1,5 +1,10 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faTwitter, faGithub } from '@fortawesome/free-brands-svg-icons';
+import {
+  faTwitter,
+  faGithub,
+  faLinkedin
+} from '@fortawesome/free-brands-svg-icons';
+import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
 import React from 'react';
 import styled from 'styled-components';
 
@@ -29,10 +34,16 @@ const SocialLinkWrapper = styled.a`
 export default () => (
   <SocialWrapper>
     <SocialLinkWrapper href="https://github.com/cbargren">
-      <FontAwesomeIcon icon={faGithub} />
+      <FontAwesomeIcon size="xs" icon={faGithub} />
     </SocialLinkWrapper>
-    <SocialLinkWrapper href="https://twitter.com/cbargren">
-      <FontAwesomeIcon icon={faTwitter} />
+    {/* <SocialLinkWrapper href="https://twitter.com/cbargren">
+      <FontAwesomeIcon size="xs" icon={faTwitter} />
+    </SocialLinkWrapper> */}
+    <SocialLinkWrapper href="https://linkedin.com/cbargren">
+      <FontAwesomeIcon size="xs" icon={faLinkedin} />
+    </SocialLinkWrapper>
+    <SocialLinkWrapper href="mailto:cbargren@gmail.com">
+      <FontAwesomeIcon size="xs" icon={faEnvelope} />
     </SocialLinkWrapper>
   </SocialWrapper>
 );
