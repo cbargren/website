@@ -1,7 +1,9 @@
 import React from 'react';
 
+import Title from '../components/Title';
+
 export default () => (
   <div>
-    <h2>Home</h2>
+    <Title>HOME</Title>
   </div>
 );
