@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { BrowserRouter as Router } from 'react-router-dom';
 import styled, { ThemeProvider } from 'styled-components';
 
@@ -6,7 +6,7 @@ import AppLayout from './components/AppLayout';
 import Header from './components/Header';
 import Sidebar from './components/Sidebar';
 import Routes from './routes';
-import theme from './themes/light';
+import light from './themes/light';
 
 const AppWrapper = styled.div`
   display: flex;
@@ -35,26 +35,20 @@ const ContentWrapper = styled.main`
   background-color: ${({ theme }) => theme.backgroundSecondary};
 `;
 
-class App extends Component {
-  render() {
-    return (
-      <ThemeProvider theme={theme}>
-        <Router>
-          <AppLayout>
-            <AppWrapper>
-              <HeaderWrapper>
-                <Header />
-              </HeaderWrapper>
-              <SidebarWrapper />
-              <ContentWrapper>
-                <Routes />
-              </ContentWrapper>
-            </AppWrapper>
-          </AppLayout>
-        </Router>
-      </ThemeProvider>
-    );
-  }
-}
-
-export default App;
+export default () => (
+  <ThemeProvider theme={light}>
+    <Router>
+      <AppLayout>
+        <AppWrapper>
+          <HeaderWrapper>
+            <Header />
+          </HeaderWrapper>
+          <SidebarWrapper />
+          <ContentWrapper>
+            <Routes />
+          </ContentWrapper>
+        </AppWrapper>
+      </AppLayout>
+    </Router>
+  </ThemeProvider>
+);
