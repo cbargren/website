@@ -1,12 +1,12 @@
 import styled from 'styled-components';
 
-export const Nav = styled.ul`
+export const Nav = styled.div`
   list-style: none;
   display: flex;
   justify-content: space-evenly;
 `;
 
-export const NavItem = styled.li`
+export const NavItem = styled.div`
   display: inline-block;
 
   && a,

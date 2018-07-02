@@ -1,27 +1,12 @@
 import React, { Component } from 'react';
-import { BrowserRouter as Router, Link } from 'react-router-dom';
+import { BrowserRouter as Router } from 'react-router-dom';
 import styled, { ThemeProvider } from 'styled-components';
 
-import theme from './themes/light';
-import { Nav, NavItem, Spacer } from './components/Nav';
-import Routes from './routes';
+import AppLayout from './components/AppLayout';
+import Header from './components/Header';
 import Sidebar from './components/Sidebar';
-
-const AppLayout = styled.div`
-  background-color: ${({ theme }) => theme.backgroundPrimary};
-  height: 100vh;
-  width: 100vw;
-  color: ${({ theme }) => theme.textColor};
-
-  transition: ease 200ms;
-  & a:-webkit-any-link {
-    color: ${({ theme }) => theme.textColorLink};
-
-    &:hover {
-      color: ${({ theme }) => theme.textColorLinkHover};
-    }
-  }
-`;
+import Routes from './routes';
+import theme from './themes/light';
 
 const AppWrapper = styled.div`
   display: flex;
@@ -33,11 +18,7 @@ const AppWrapper = styled.div`
 const HeaderWrapper = styled.div`
   flex: 0 0 100%;
   padding: 10px 10px 0 10px;
-`;
-
-const NavWrapper = styled(Nav)`
-  padding: 10px;
-  background-color: ${({ theme }) => theme.backgroundSecondary};
+  box-sizing: border-box;
 `;
 
 const SidebarWrapper = styled(Sidebar)`
@@ -62,15 +43,7 @@ class App extends Component {
           <AppLayout>
             <AppWrapper>
               <HeaderWrapper>
-                <NavWrapper>
-                  <NavItem>
-                    <Link to="/">HOME</Link>
-                  </NavItem>
-                  <Spacer />
-                  <NavItem>
-                    <Link to="/About">ABOUT</Link>
-                  </NavItem>
-                </NavWrapper>
+                <Header />
               </HeaderWrapper>
               <SidebarWrapper />
               <ContentWrapper>
