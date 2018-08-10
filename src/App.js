@@ -15,23 +15,27 @@ const AppWrapper = styled.div`
   margin: 0 auto;
 `;
 
-const HeaderWrapper = styled.div`
-  flex: 0 0 100%;
-  padding: 10px 10px 0 10px;
+const CardWrapper = styled.div`
+  box-shadow: ${({ theme }) => theme.cardBoxShadow};
+`;
+
+const HeaderWrapper = styled(CardWrapper)`
+  flex: 0 0 calc(100% - 20px);
+  margin: 10px 10px 0 10px;
   box-sizing: border-box;
 `;
 
-const SidebarWrapper = styled(Sidebar)`
+const SidebarWrapper = styled(CardWrapper)`
   flex: 0 0 250px;
   margin: 10px;
   padding: 20px;
   background-color: ${({ theme }) => theme.backgroundSecondary};
 `;
 
-const ContentWrapper = styled.main`
+const ContentWrapper = styled(CardWrapper)`
   flex: 1 1;
   margin: 10px;
-  padding: 20px;
+  padding: 3em;
   background-color: ${({ theme }) => theme.backgroundSecondary};
 `;
 
@@ -43,7 +47,9 @@ export default () => (
           <HeaderWrapper>
             <Header />
           </HeaderWrapper>
-          <SidebarWrapper />
+          <SidebarWrapper>
+            <Sidebar />
+          </SidebarWrapper>
           <ContentWrapper>
             <Routes />
           </ContentWrapper>
