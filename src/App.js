@@ -13,6 +13,7 @@ const AppWrapper = styled.div`
   flex-flow: row wrap;
   max-width: 1200px;
   margin: 0 auto;
+  align-items: flex-start;
 `;
 
 const CardWrapper = styled.div`
