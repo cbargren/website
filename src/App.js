@@ -6,6 +6,7 @@ import AppLayout from './components/AppLayout';
 import Header from './components/Header';
 import Sidebar from './components/Sidebar';
 import Routes from './routes';
+import dark from './themes/dark';
 import light from './themes/light';
 
 const AppWrapper = styled.div`
@@ -41,7 +42,7 @@ const ContentWrapper = styled(CardWrapper)`
 `;
 
 export default () => (
-  <ThemeProvider theme={light}>
+  <ThemeProvider theme={dark}>
     <Router>
       <AppLayout>
         <AppWrapper>

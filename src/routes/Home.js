@@ -44,10 +44,12 @@ export default ({ yearsExperience = 7, yearsReactExperience = 3 }) => (
     <Title>About This Site</Title>
     <Body>
       <p>
-        Welcome to my website. It's built using React and Redux. You might want
-        to ask "Chris, isn't Redux way overkill for a simple website like this?"
-        Why yes, yes it is. But I like Redux so I'm using it for this site.
-        ¯\_(ツ)_/¯
+        Man, you really don't have anything better to do than to read about my
+        lame personal website? Alright then. 😄 It's built using React and Redux
+        plus some other handy tools like styled-components and font-awesome. You
+        might want to ask "Chris, isn't Redux way overkill for a simple website
+        like this?" Well, you're not wrong! But hey, I'm doing this for funsies,
+        so why not overengineer it a little bit? ¯\_(ツ)_/¯
       </p>
       <p>
         You can find the source code on GitHub{' '}
