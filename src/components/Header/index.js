@@ -24,11 +24,11 @@ export default () => (
     </NavItem>
     <Spacer />
     <NavItem>
-      <Link to="/about">RESUME</Link>
+      <Link to="/resume">RESUME</Link>
     </NavItem>
     <Spacer />
     <NavItem>
-      <Link to="/about">STATS</Link>
+      <Link to="/stats">STATS</Link>
     </NavItem>
   </NavWrapper>
 );
