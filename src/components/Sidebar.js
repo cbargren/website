@@ -7,6 +7,7 @@ import styled from 'styled-components';
 import Avatar from './Avatar';
 import { Nav, NavItem } from './Nav';
 import Social from './Social';
+import ThemeToggle from '../containers/ThemeToggle';
 
 const SidebarWrapper = styled.div`
   text-align: center;
@@ -61,5 +62,8 @@ export default ({ className }) => (
     </div>
     <hr />
     <Social />
+    <p>
+      <ThemeToggle />
+    </p>
   </SidebarWrapper>
 );

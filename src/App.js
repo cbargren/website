@@ -2,12 +2,10 @@ import React from 'react';
 import { BrowserRouter as Router } from 'react-router-dom';
 import styled, { ThemeProvider } from 'styled-components';
 
-import AppLayout from './components/AppLayout';
+import AppLayout from './containers/AppLayout';
 import Header from './components/Header';
 import Sidebar from './components/Sidebar';
 import Routes from './routes';
-import dark from './themes/dark';
-import light from './themes/light';
 
 const AppWrapper = styled.div`
   display: flex;
@@ -41,8 +39,8 @@ const ContentWrapper = styled(CardWrapper)`
   background-color: ${({ theme }) => theme.backgroundSecondary};
 `;
 
-export default () => (
-  <ThemeProvider theme={dark}>
+export default ({ theme }) => (
+  <ThemeProvider theme={theme}>
     <Router>
       <AppLayout>
         <AppWrapper>

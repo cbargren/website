@@ -26,7 +26,7 @@ const SocialLinkWrapper = styled.a`
       color: ${({ theme }) => theme.textColorLink};
     }
   }
-  &:last-child: {
+  &:last-child {
     margin-right: 0;
   }
 `;
