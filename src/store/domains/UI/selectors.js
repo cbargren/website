@@ -20,7 +20,7 @@ export const getTheme = createSelector(
 
 export const getBackgroundProp = createSelector(
   getUIDomain,
-  ui => 'carbon'
+  ui => ui.background
 );
 
 export const getBackground = createSelector(
